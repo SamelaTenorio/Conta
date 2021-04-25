@@ -49,5 +49,8 @@ public class Conta{
     public void setNome(String nome) {
         this.nome = nome;
     }
+    public void deposito(double valor){
+        saldo +=valor;
+    }
 
 }
