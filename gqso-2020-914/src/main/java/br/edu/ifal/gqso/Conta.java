@@ -55,11 +55,13 @@ public class Conta{
     public void deposito(double valor){
         saldo +=valor;
     }
-    public void saque(double valor)  throws SaldoInsulficiente{
+    
+    public boolean saque(double valor) {
         if(saldo - valor >= 0) {
             saldo -= valor;
+            return true;
           } else {
-            throw new SaldoInsulficiente();
+            return false;
           }
     }
 
