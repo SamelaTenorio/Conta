@@ -2,7 +2,7 @@ package br.edu.ifal.gqso;
 
 public class Conta{
 
-    public class SaldoInsulficiente extends Exception {
+    public class SaldoInsuficiente extends Exception {
         
     }
 
