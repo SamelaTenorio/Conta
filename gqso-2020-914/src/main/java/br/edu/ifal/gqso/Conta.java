@@ -52,5 +52,13 @@ public class Conta{
     public void deposito(double valor){
         saldo +=valor;
     }
+    public boolean saque(double valor){
+        if(saldo - valor >= 0) {
+            saldo -= valor;
+            return true;
+          } else {
+            return false;
+          }
+    }
 
 }
