@@ -10,5 +10,6 @@ public class ContaTest {
     public void contaTest(){
         Conta conta = new Conta("Sâmela Tenório", "000000000-00",123, 0.0);   
         assertEquals(0.0, conta.getSaldo());
+        conta.deposito(100.0);
     }
 }
