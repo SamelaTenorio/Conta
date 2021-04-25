@@ -2,6 +2,9 @@ package br.edu.ifal.gqso;
 
 public class Conta{
 
+    public class SaldoInsulficiente extends Exception {
+    }
+
     //atributos
 
     private String nome;
@@ -52,12 +55,11 @@ public class Conta{
     public void deposito(double valor){
         saldo +=valor;
     }
-    public boolean saque(double valor){
+    public void saque(double valor)  throws SaldoInsulficiente{
         if(saldo - valor >= 0) {
             saldo -= valor;
-            return true;
           } else {
-            return false;
+            throw new SaldoInsulficiente();
           }
     }
 
