@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import br.edu.ifal.gqso.Conta.SaldoInsulficiente;
 
 public class ContaTest {
 
@@ -31,7 +32,7 @@ public class ContaTest {
     }
 
     @Test
-    public void exceptionTest(){
+    public void exceptionTest() throws SaldoInsulficiente{
         
     }
 }
