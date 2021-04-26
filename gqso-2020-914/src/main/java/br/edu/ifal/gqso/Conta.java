@@ -2,16 +2,12 @@ package br.edu.ifal.gqso;
 
 public class Conta{
 
-    public class SaldoInsuficiente extends Exception {
-        
-    }
-
     //atributos
 
     private String nome;
     private String cpf;
     private int numero;
-    private double saldo;
+    private double saldo = 0.0;
 
     //construtor
 
@@ -53,17 +49,23 @@ public class Conta{
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void deposito(double valor){
+    public double deposito(double valor) throws ParametroInvalido{
+        if(valor==0){
+            throw new ParametroInvalido();
+        }
         saldo +=valor;
+        return saldo;
     }
 
-    public boolean saque(double valor) {
-
-        if(saldo - valor >= 0) {
-            saldo -= valor;
-            return true;
-          } else {
-            return false;
+    public double saque(double valor) throws ParametroInvalido, SaldoInsuficiente{
+        if (valor == 0) {
+            throw new ParametroInvalido();
+        }
+        if (valor > saldo) {
+            throw new SaldoInsuficiente();
+        }
+        saldo -= valor;
+        return saldo;
         }
     } 
 
