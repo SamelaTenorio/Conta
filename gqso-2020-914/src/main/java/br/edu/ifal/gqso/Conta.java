@@ -50,10 +50,10 @@ public class Conta{
         this.nome = nome;
     }
     public double deposito(double valor) throws ParametroInvalido{
-        if(valor==0){
+        if(valor == 0){
             throw new ParametroInvalido();
         }
-        saldo +=valor;
+        saldo += valor;
         return saldo;
     }
 
@@ -64,7 +64,7 @@ public class Conta{
         if (valor > saldo) {
             throw new SaldoInsuficiente();
         }
-        saldo -=valor;
+        saldo -= valor;
         return saldo;
         }
 }
