@@ -64,9 +64,7 @@ public class Conta{
         if (valor > saldo) {
             throw new SaldoInsuficiente();
         }
-        saldo -= valor;
+        saldo -=valor;
         return saldo;
         }
-    } 
-
 }
