@@ -23,7 +23,7 @@ public class ContaTest {
 
     @Test
     public void saqueSaldoInsuficiente(){
-        assertThrows(SaldoInsuficiente.class, () -> conta.saque(74.0));
+        assertThrows(SaldoInsuficiente.class, () -> conta.saque(78.0));
     }
 
     @Test
