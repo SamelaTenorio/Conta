@@ -1,4 +1,1 @@
-
-# IFAL Arapiraca GQSO 2020
-Projeto de Conta desenvolvido em TDD.
-
+Projeto de Conta Bancária desenvolvido em TDD. Conta com funções de consulta de saldo, depósito e saque. Possui testes das funções de consulta de saldo, depósito e saque, além de casos de verificação para tentativas de saque de valores superiores ao saldo e de valores de saque e depósito inválidos.
